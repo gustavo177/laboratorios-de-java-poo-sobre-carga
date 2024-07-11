@@ -1,17 +1,21 @@
 package org.gustavo.poosobrecarga;
 
 public class Calculadora {
-    public int sumar(int a, int b) {
+
+    private Calculadora() {
+    }
+
+    public static int sumar(int a, int b) {
         return a + b;
     }
-    public int sumar(int... argumentos){
+    public static int sumar(int... argumentos){
         int total = 0;
         for(int i: argumentos){
             total+=i;
         }
         return total;
     }
-    public float sumar(float a, int... argumentos){
+    public static float sumar(float a, int... argumentos){
         float total = a;
         for(int i: argumentos){
             total+=i;
@@ -19,7 +23,7 @@ public class Calculadora {
         return total;
     }
 
-    public double sumar(double... varargs){
+    public static double sumar(double... varargs){
         double total=0.0;
         for(double d: varargs){
             total+=d;
@@ -27,23 +31,23 @@ public class Calculadora {
         return total;
     }
 
-    public float sumar(float aa, float bb) {
+    public static float sumar(float aa, float bb) {
         return aa + bb;
     }
 
-    public float sumar(int i, float j) {
+    public static float sumar(int i, float j) {
         return i + j;
     }
 
-    public float sumar(float j, int i) {
+    public static float sumar(float j, int i) {
         return j + i;
     }
 
-    public double sumar(double a, double b) {
+    public static double sumar(double a, double b) {
         return a + b;
     }
 
-    public int sumar(String a, String b) {
+    public static int sumar(String a, String b) {
         int resultado;
         try {
             resultado = Integer.parseInt(a) + Integer.parseInt(b);
@@ -53,7 +57,7 @@ public class Calculadora {
         return resultado;
     }
 
-    public double sumar(double a, double b, double c) {
+    public static double sumar(double a, double b, double c) {
         return a + b + c;
     }
 }
