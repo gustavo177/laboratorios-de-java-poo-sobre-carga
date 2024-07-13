@@ -2,8 +2,7 @@ package org.gustavo.poosobrecarga;
 import  static org.gustavo.poosobrecarga.Calculadora.*;
 public class EjemploSobrecarga {
     public static void main(String[] args) {
-//        Restringimos que no se pueda crear instancia con el constructor private
-//        Calculadora cal = new Calculadora();
+
         System.out.println("sumar int : " + sumar(10, 5));
         System.out.println("sumar float : " + sumar(10.0F, 5F));
         System.out.println("sumar float-int : " + sumar(10.0F, 5));
